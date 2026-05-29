@@ -1,5 +1,5 @@
 import pandas as pd
-from acti_motus import Features, Activities, Exposures
+from actimotus import Features, Activities, Exposures
 import actipy
 import numpy as np
 from pathlib import Path
@@ -9,7 +9,7 @@ from joblib import Parallel, delayed
 import shutil
 import gc
 import logging
-from acti_motus.exposures import PLOT_LANG
+from actimotus.exposures import PLOT
 import copy
 import calendar
 
@@ -29,7 +29,7 @@ ACTIVITY_PLOT_COLORS = {
 
 
 def make_activity_plot_lang(activities_df: pd.DataFrame) -> dict:
-    plot_lang = copy.deepcopy(PLOT_LANG)
+    plot_lang = copy.deepcopy(PLOT)
     present = set(activities_df["activity"].dropna().astype(str).unique())
 
     for activity, color in ACTIVITY_PLOT_COLORS.items():
