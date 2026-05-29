@@ -1,1 +1,5 @@
 3.11
+import pandas as pd 
+from actimotus import sens 
+raw = sens.from_bin(C:\Users\meny\OneDrive - Region Sjælland\AX3\python_actimotusC:\Users\meny\OneDrive - Region Sjælland\AX3\python_actimotus
+print)
